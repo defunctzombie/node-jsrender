@@ -12,21 +12,23 @@ var jsrender = global.window.JsViews;
 exports.registerTags = jsrender.views.registerTags;
 
 // express view compiler
-exports.compile = function (markup, options) {
-    jsrender.views.allowCode = true;
+exports.express = {
+    compile: function (markup, options) {
+        jsrender.views.allowCode = true;
 
-    options = options || {};
-    var name = options.filename || markup;
+        options = options || {};
+        var name = options.filename || markup;
 
-    delete jsrender.views.templates[name];
+        delete jsrender.views.templates[name];
 
-    jsrender.template(name, markup);
+        jsrender.template(name, markup);
 
-    return function render(locals) {
-        return jsrender
-            .render(name, locals)
-            // allows for having client side templates by using {% ... %}
-            .replace(/{%/g,'{{')
-            .replace(/%}/g,'}}');
-    };
-};
+        return function render(locals) {
+            return jsrender
+                .render(name, locals)
+                // allows for having client side templates by using {% ... %}
+                .replace(/{%/g,'{{')
+                .replace(/%}/g,'}}');
+        };
+    }
+}
