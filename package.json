@@ -1,0 +1,17 @@
+{
+  "name": "jsrender",
+  "description": "jsrender expressjs middleware",
+  "version": "0.0.1",
+  "author": "Roman Shtylman <shtylman@gmail.com>",
+  "contributors": [
+    { "name": "Boris Moore", "email": "borismoore@gmail.com"}
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shtylman/node-jsrender.git"
+  },
+  "main": "index.js",
+  "directories": { "lib": "./lib" },
+  "dependencies": {},
+  "devDependencies": {}
+}
