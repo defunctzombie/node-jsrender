@@ -10,8 +10,13 @@
     "type": "git",
     "url": "git://github.com/shtylman/node-jsrender.git"
   },
+  "scripts": {
+      "test": "nodeunit test.js"
+  },
   "main": "index.js",
   "directories": { "lib": "./lib" },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+      "nodeunit": "*"
+  }
 }
