@@ -43,7 +43,7 @@ exports.express = {
 
         return function render(locals) {
             return jsrender
-                .render(name, locals)
+                .render(locals, name)
                 // allows for having client side templates by using {% ... %}
                 .replace(/{%/g,'{{')
                 .replace(/%}/g,'}}');

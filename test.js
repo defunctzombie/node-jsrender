@@ -16,3 +16,11 @@ exports.single = function(test) {
     test.done();
 };
 
+// test the compile & render functions
+exports.express = function(test) {
+    var tmpl = jsrender.express.compile('<p>{{=field}}</p>');
+    var result = tmpl({field: 'test'});
+    test.equals('<p>test</p>', result);
+    test.done();
+};
+
