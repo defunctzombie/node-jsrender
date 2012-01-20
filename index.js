@@ -10,6 +10,7 @@ var jsrender = global.window.JsViews;
 
 // export tag registration for users to provide custom tags
 exports.registerTags = jsrender.views.registerTags;
+exports.registerHelpers = jsrender.views.registerHelpers;
 
 // create a new template which you can invoke directly
 // template(locals);
